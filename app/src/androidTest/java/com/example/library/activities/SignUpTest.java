@@ -22,6 +22,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import android.view.View;
+
+import java.util.Objects;
+
 @RunWith(AndroidJUnit4ClassRunner.class)
 public class SignUpTest extends TestCase {
 
@@ -48,7 +51,7 @@ public class SignUpTest extends TestCase {
         Espresso.onView(ViewMatchers.withId(R.id.createdPassword)).perform(ViewActions.typeText("password"));
         Espresso.onView(ViewMatchers.withId(R.id.confirmedPassword)).perform(ViewActions.typeText("password"));
         InputMethodManager inputMethodManager = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+        inputMethodManager.hideSoftInputFromWindow(Objects.requireNonNull(activity.getCurrentFocus()).getWindowToken(), 0);
         Thread.sleep(2000);
         Espresso.onView(ViewMatchers.withId(R.id.signUpBtn)).perform(ViewActions.click());
 
