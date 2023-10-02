@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Library</string>
+    <string name="userMail">yourname@example.com</string>
+    <string name="userPassword">password</string>
+    <string name="log_in">log in</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="searchHint">Search titles, author, category or ISBN</string>
+    <string name="create_password">create password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="full_name">Full Name</string>
+    <string name="registration_number">registration number</string>
+    <string name="welcomePhrase">Find, Borrow, Return</string>
+    <string name="welcome">WELCOME</string>
+    <string name="title_activity_app_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="image_cover">Image Cover</string>
+    <string name="book_s_descriptions">Book\'s Descriptions</string>
+    <string name="isbn">ISBN</string>
+    <string name="author">Author</string>
+    <string name="add_book">add book</string>
+    <string name="book_cover">Book cover</string>
+    <string name="book_title">Book Title</string>
+    <string name="background_image">background_image</string>
+    <string name="details">Details</string>
+    <string name="borrowed">Borrowed</string>
+    <string name="borrow">Borrow</string>
+    <string name="request">Request</string>
+    <string name="available_books">Available Books</string>
+    <string name="browse_books">Browse books</string>
+    <string name="notifications">Notifications</string>
+    <string name="app_names">CIVE LIBRARY BOOKS</string>
+
+    <string-array name="bookCategory">
+        <item>Programming</item>
+        <item>Electronics</item>
+        <item>Novel</item>
+        <item>Mechanics</item>
+        <item>Photography</item>
+        <item>Animation</item>
+        <item>Language</item>
+        <item>Mathematics</item>
+        <item>Finance</item>
+        <item>Religion</item>
+        <item>Communication</item>
+        <item>Music</item>
+        <item>Art</item>
+        <item>Film</item>
+        <item>Architecture</item>
+    </string-array>
+</resources>
