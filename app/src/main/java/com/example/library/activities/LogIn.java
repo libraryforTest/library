@@ -114,7 +114,7 @@ String getUserInfo_url = "http://192.168.1.6/library/retrieve_user_info.php";
 
 
 
-    private void getData() {
+    void getData() {
 
 
         final String  email, password;
@@ -248,6 +248,19 @@ String getUserInfo_url = "http://192.168.1.6/library/retrieve_user_info.php";
 
         // Show the Alert Dialog box
         alertDialog.show();
+    }
+
+
+    // Constructor or setter for progressBar
+
+    public void setProgressBar(ProgressBar progressBar) {
+        this.progressBar = progressBar;
+    }
+
+    public void setProgressBarVisibility(int visibility) {
+        if (progressBar != null) {
+            progressBar.setVisibility(visibility);
+        }
     }
 
 

@@ -118,7 +118,11 @@ Bitmap bitmap;
 
             @Override
             public void onClick(View v) {
-                validate();
+                String name = fullName.getText().toString();
+                String email = userMail.getText().toString();
+                String newPass = newPassword.getText().toString();
+                String  conPass = confirmedPwd.getText().toString();
+                validate(name,email,newPass,conPass);
             }
 
         });
@@ -127,12 +131,9 @@ Bitmap bitmap;
     }
 
 
-    public  void validate(){
-        final String name, email, newPass, conPass;
-        name = fullName.getText().toString();
-        email = userMail.getText().toString();
-        newPass = newPassword.getText().toString();
-        conPass = confirmedPwd.getText().toString();
+    public  void validate(String name,String email,String newPass,String conPass){
+
+
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
         String namePattern = "(?=^.{0,50}$)^[a-zA-Z-]+\\s[a-zA-Z-]+$";
 
@@ -152,12 +153,7 @@ Bitmap bitmap;
                                 if(response.equals("Can't create account! exixting user")){
                                     Toast.makeText(signUp.this, response, Toast.LENGTH_SHORT).show();
                                 }else if(response.equals("dont Exist")){
-                                    if(!(userImage.getDrawable() == userImage2.getDrawable())){
-                                        sendData();
-                                        ImageUploadToServerFunction();
-                                    }else {
-                                        Toast.makeText(signUp.this, "Choose Image", Toast.LENGTH_SHORT).show();
-                                    }
+                                    sendData();
 
                                 }
                             }
