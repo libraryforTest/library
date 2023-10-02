@@ -36,7 +36,7 @@ import java.util.ArrayList;
 
 public class AppSearch extends AppCompatActivity {
     private BooksAdapter myBooksAdapter;
-    String get_All_booksUrl = "http://192.168.43.225/library/get_all_books.php";
+    String get_All_booksUrl = "http://192.168.1.6/library/get_all_books.php";
     RecyclerView allRecyclerView;
     ArrayList<com.example.library.Books> allBookList;
 

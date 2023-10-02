@@ -39,9 +39,9 @@ import java.util.Map;
 
 public class AppNotification extends AppCompatActivity{
 
-    String get_Admin_alert = "http://192.168.43.225/library/get_notification_admin.php";
-    String get_User_alert = "http://192.168.43.225/library/get_notification_user.php";
-    String getUserInfo_url = "http://192.168.43.225/library/retrieve_user_info.php";
+    String get_Admin_alert = "http://192.168.1.6/library/get_notification_admin.php";
+    String get_User_alert = "http://192.168.1.6/library/get_notification_user.php";
+    String getUserInfo_url = "http://192.168.1.6/library/retrieve_user_info.php";
 
 
     private NotificationAdapter notificationAdapter;

@@ -39,8 +39,8 @@ public class LogIn extends AppCompatActivity {
     TextView signUp;
     TextView lpass;
     ProgressBar progressBar;
-    String logIn_url = "http://192.168.43.225/library/login.php";
-String getUserInfo_url = "http://192.168.43.225/library/retrieve_user_info.php";
+    String logIn_url = "http://192.168.1.6/library/login.php";
+String getUserInfo_url = "http://192.168.1.6/library/retrieve_user_info.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,7 +173,7 @@ String getUserInfo_url = "http://192.168.43.225/library/retrieve_user_info.php";
                             try {
                                 JSONObject jsonObject = response.getJSONObject(i);
                                 if(jsonObject.getString("Email").equals(email) && jsonObject.getString("Category").equals("Admin")){
-                                    Intent intent = new Intent(LogIn.this, AppNotification.class);
+                                    Intent intent = new Intent(LogIn.this, AppHome.class);
                                     intent.putExtra("Mail",email);
                                     intent.putExtra("ROLE","Admin");
                                     startActivity(intent);

@@ -48,10 +48,10 @@ Button borrowBtn;
 TextView bookTitle, bookAuthor, bookISBN, bookCategory, uploadedBy, booksAvailable, descriptions;
 
 
-    String validate_url = "http://192.168.43.225/library/validate_request.php";
-    String addNotificationurl = "http://192.168.43.225/library/add_notification.php";
+    String validate_url = "http://192.168.1.6/library/validate_request.php";
+    String addNotificationurl = "http://192.168.1.6/library/add_notification.php";
 
-    String addRequestUrl = "http://192.168.43.225/library/addRequest.php";
+    String addRequestUrl = "http://192.168.1.6/library/addRequest.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

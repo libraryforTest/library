@@ -48,16 +48,16 @@ public class AppHome extends AppCompatActivity {
         public  static final String REQUESTS = "requests";
 
 
-//    String bookInfoUrl = "http://192.168.137.1/library/get_books.php";
+//    String bookInfoUrl = "http://192.168.1.6/library/get_books.php";
 //        String getUserInfo_url = "http://192.168.137.1/library/retrieve_user_info.php";
 
 
 //these are the URLs for the APIs
-    String bookInfoUrl = "http://192.168.43.225/library/get_books.php";
-    String get_popular_booksUrl = "http://192.168.43.225/library/get_popular_books.php";
-    String get_programming_booksUrl = "http://192.168.43.225/library/get_programing_books.php";
-    String get_electronics_booksUrl = "http://192.168.43.225/library/get_electronics_books.php";
-    String getUserInfo_url = "http://192.168.43.225/library/retrieve_user_info.php";
+    String bookInfoUrl = "http://192.168.1.6/library/get_books.php";
+    String get_popular_booksUrl = "http://192.168.1.6/library/get_popular_books.php";
+    String get_programming_booksUrl = "http://192.168.1.6/library/get_programing_books.php";
+    String get_electronics_booksUrl = "http://192.168.1.6/library/get_electronics_books.php";
+    String getUserInfo_url = "http://192.168.1.6/library/retrieve_user_info.php";
 
 
     private BooksAdapter myBooksAdapter;
