@@ -41,7 +41,7 @@ public class Welcome extends AppCompatActivity {
         builder.setMessage("Do you want to exit ? 😢");
 
         // Set Alert Title
-        builder.setTitle("📙 Library");
+        builder.setTitle("EcoMarket");
 
         // Set Cancelable false
         // for when the user clicks on the outside

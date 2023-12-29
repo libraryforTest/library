@@ -7,7 +7,7 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    tools:context=".activities.EditAccount">
+    tools:context="com.example.ecomarket.activities.EditAccount">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
+                    android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Change Password"
@@ -71,6 +72,7 @@
                     android:layout_marginHorizontal="30dp"
                     />
                 <EditText
+                    android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Confirm Password"
@@ -100,13 +102,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/deleteAccount"
-            android:background="@color/red"
+            android:background="@color/green"
             android:text="delete account"
             android:textStyle="bold"
             android:paddingHorizontal="20dp"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="40dp"
             android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
             />
+
     </LinearLayout>
 
 

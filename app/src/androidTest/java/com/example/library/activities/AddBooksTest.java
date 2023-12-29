@@ -2,23 +2,14 @@ package com.example.library.activities;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Spinner;
 
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.intent.Intents;
-import androidx.test.espresso.intent.matcher.IntentMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
+import com.example.ecomarket.activities.AddUser;
 import com.example.library.R;
 
 import org.junit.After;
@@ -27,7 +18,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import java.io.IOException;
 import java.util.Objects;
 
 import static androidx.test.espresso.Espresso.onView;
@@ -38,8 +28,6 @@ import static androidx.test.espresso.intent.Intents.intended;
 import static androidx.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import static androidx.test.espresso.intent.matcher.IntentMatchers.hasExtra;
 import static androidx.test.espresso.intent.matcher.IntentMatchers.hasType;
-import static androidx.test.espresso.intent.matcher.IntentMatchers.toPackage;
-import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withSpinnerText;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
@@ -51,15 +39,15 @@ import junit.framework.TestCase;
 public class AddBooksTest extends TestCase {
 
     @Rule
-    public ActivityScenarioRule<AddBooks> activityRule = new ActivityScenarioRule<>(AddBooks.class);
+    public ActivityScenarioRule<AddUser> activityRule = new ActivityScenarioRule<>(AddUser.class);
 
     private Activity activity;
 
     @Before
     public void setUp() {
-        activityRule.getScenario().onActivity(new ActivityScenario.ActivityAction<AddBooks>() {
+        activityRule.getScenario().onActivity(new ActivityScenario.ActivityAction<AddUser>() {
             @Override
-            public void perform(AddBooks activity) {
+            public void perform(AddUser activity) {
                 // This block allows us to get a reference to the activity
                 AddBooksTest.this.activity = activity;
             }

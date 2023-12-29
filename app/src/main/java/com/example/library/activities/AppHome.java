@@ -48,8 +48,7 @@ public class AppHome extends AppCompatActivity {
         public  static final String REQUESTS = "requests";
 
 
-//    String bookInfoUrl = "http://192.168.1.6/library/get_books.php";
-//        String getUserInfo_url = "http://192.168.137.1/library/retrieve_user_info.php";
+
 
 
 //these are the URLs for the APIs

@@ -3,7 +3,7 @@
     <item
         android:id="@+id/addBooks"
         android:icon="@drawable/ic_add"
-        android:title="Add books" />
+        android:title="Add Users" />
     <item
         android:id="@+id/requests"
         android:icon="@drawable/ic_baseline_message_24"

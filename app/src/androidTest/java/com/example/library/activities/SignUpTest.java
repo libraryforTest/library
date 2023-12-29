@@ -7,13 +7,12 @@ import android.view.inputmethod.InputMethodManager;
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.Espresso;
 import androidx.test.espresso.action.ViewActions;
-import androidx.test.espresso.assertion.ViewAssertions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner;
 
 import com.example.library.R;
-import com.example.library.activities.signUp;
+import com.example.ecomarket.activities.signUp;
 
 import junit.framework.TestCase;
 
@@ -21,7 +20,6 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import android.view.View;
 
 import java.util.Objects;
 

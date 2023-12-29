@@ -32,6 +32,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.library.BD.UserDB;
+import com.example.library.Model.User;
 import com.example.library.R;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -146,32 +148,10 @@ Bitmap bitmap;
             }
 
             else{
-                StringRequest validate = new StringRequest(Request.Method.POST, validate_url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                if(response.equals("Can't create account! exixting user")){
-                                    Toast.makeText(signUp.this, response, Toast.LENGTH_SHORT).show();
-                                }else if(response.equals("dont Exist")){
-                                    sendData();
 
-                                }
-                            }
-                        }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace();
-                    }
-                }){
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String, String> params = new HashMap<String, String>();
-                        params.put("email",email);
-                        return params;
-                    }
-                };
-                RequestQueue requestQueue = Volley.newRequestQueue(signUp.this);
-                requestQueue.add(validate);
+
+                sendData();
+
             }
 
 
@@ -200,43 +180,24 @@ Bitmap bitmap;
 
             if (!password.equals("wrong")){
                 if(!(password.length() < 8)){
-                    StringRequest signUprequest = new StringRequest(Request.Method.POST, Sendurl,
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    if(response.equals("Welcome \uD83E\uDD17")){
-                                        userMail.setText("");
-                                        newPassword.setText("");
-                                        confirmedPwd.setText("");
-                                        progressBar.setVisibility(View.VISIBLE);
-                                        Toast.makeText(signUp.this, "Log In", Toast.LENGTH_LONG).show();
-                                        Intent intent = new Intent(signUp.this, LogIn.class);
-                                        intent.putExtra("fullname", name);
-                                        startActivity(intent);
-                                        finish();
-                                    }
+                    User u = new User();
+                    u.setEmail(email);
+                    u.setUsername(name);
+                    u.setRole("user");
+                    u.setPwd(password);
+                    UserDB userdb= new UserDB(getBaseContext());
+                    userdb.opendb();
+                    long l = userdb.insertUser(u);
+                    progressBar.setVisibility(View.VISIBLE);
+                    Toast.makeText(signUp.this, "Log In", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(signUp.this, LogIn.class);
+                    intent.putExtra("fullname", name);
+                    startActivity(intent);
+                    finish();
 
 
-                                }
-                            }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            progressBar.setVisibility(View.INVISIBLE);
-                            Toast.makeText(signUp.this, error.getMessage(), Toast.LENGTH_LONG).show();
-                            error.printStackTrace();
-                        }
-                    }){
-                        @Override
-                        protected Map<String, String> getParams() throws AuthFailureError {
-                            Map<String, String> params = new HashMap<String, String>();
-                            params.put("fullname",name);
-                            params.put("email",email);
-                            params.put("password",password);
-                            return params;
-                        }
-                    };
-                    RequestQueue requestQueue = Volley.newRequestQueue(signUp.this);
-                    requestQueue.add(signUprequest);
+
+
                 }else{
                     Toast.makeText(this, "Password must be min 8 characters", Toast.LENGTH_SHORT).show();
                 }

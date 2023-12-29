@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Library</string>
+    <string name="app_name">Ecomarket</string>
     <string name="userMail">yourname@example.com</string>
     <string name="userPassword">password</string>
     <string name="log_in">log in</string>
@@ -10,7 +10,7 @@
     <string name="confirm_password">confirm password</string>
     <string name="full_name">Full Name</string>
     <string name="registration_number">registration number</string>
-    <string name="welcomePhrase">Find, Borrow, Return</string>
+    <string name="welcomePhrase">Enjoy The Shopping</string>
     <string name="welcome">WELCOME</string>
     <string name="title_activity_app_home">MainActivity</string>
     <string name="title_home">Home</string>
@@ -18,11 +18,11 @@
     <string name="title_notifications">Notifications</string>
     <string name="image_cover">Image Cover</string>
     <string name="book_s_descriptions">Book\'s Descriptions</string>
-    <string name="isbn">ISBN</string>
-    <string name="author">Author</string>
-    <string name="add_book">add book</string>
+    <string name="isbn">Password</string>
+    <string name="author">Email</string>
+    <string name="add_book">add user</string>
     <string name="book_cover">Book cover</string>
-    <string name="book_title">Book Title</string>
+    <string name="book_title">User name</string>
     <string name="background_image">background_image</string>
     <string name="details">Details</string>
     <string name="borrowed">Borrowed</string>
@@ -31,23 +31,12 @@
     <string name="available_books">Available Books</string>
     <string name="browse_books">Browse books</string>
     <string name="notifications">Notifications</string>
-    <string name="app_names">CIVE LIBRARY BOOKS</string>
+    <string name="app_names">Ecomarket</string>
 
     <string-array name="bookCategory">
-        <item>Programming</item>
-        <item>Electronics</item>
-        <item>Novel</item>
-        <item>Mechanics</item>
-        <item>Photography</item>
-        <item>Animation</item>
-        <item>Language</item>
-        <item>Mathematics</item>
-        <item>Finance</item>
-        <item>Religion</item>
-        <item>Communication</item>
-        <item>Music</item>
-        <item>Art</item>
-        <item>Film</item>
-        <item>Architecture</item>
+        <item>User</item>
+        <item>Admin</item>
+        <item>Producteur</item>
+
     </string-array>
 </resources>
